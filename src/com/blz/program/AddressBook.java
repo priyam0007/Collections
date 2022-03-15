@@ -146,6 +146,19 @@ public class AddressBook {
 		return null;
 	}
 
+	private void deletePerson() {
+		sc = new Scanner(System.in);
+		System.out.print("Enter name of person to delete its contact :-> ");
+		String personName = sc.next();
+		Person person = getPerson(personName);
+		if (person == null) {
+			System.out.println(":: sorry No person found for given name ::");
+		} else {
+			list.remove(person);
+		}
+
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -155,7 +168,7 @@ public class AddressBook {
 		Scanner sc = new Scanner(System.in);
 		int choice = 0;
 		while (choice != 10) {
-			System.out.print("please choose from below\n1-add contact\n2-edit contact\n:-> ");
+			System.out.print("please choose from below\n1-add contact\n2-edit contact\n3-delete contact\n:-> ");
 			choice = sc.nextInt();
 			switch (choice) {
 			case 1:
@@ -164,6 +177,8 @@ public class AddressBook {
 			case 2:
 				addressBook.editContact();
 				break;
+			case 3:
+				addressBook.deletePerson();
 			}
 		}
 	}
