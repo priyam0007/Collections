@@ -4,11 +4,16 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+/*
+ * @author - Priya
+ * Purpose to add the details of the person using collection
+ */
 public class AddressBook {
 	Set<Person> list = new HashSet<>();
-	// as we use hashSet here multiple entries are not allowed.
+	// As we use hashSet here multiple entries are not allowed.
 	Scanner sc;
 
+//    To add the new contacts or details to address book
 	public void addDetails() {
 		sc = new Scanner(System.in);
 
@@ -39,6 +44,8 @@ public class AddressBook {
 	}
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
 		System.out.println("Welcome to Address Book Porgram");
 
 		AddressBook addressBook = new AddressBook();
