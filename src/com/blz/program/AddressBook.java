@@ -39,6 +39,7 @@ public class AddressBook {
 		System.out.print("Enter email :: ");
 		String email = sc.next();
 
+//        We add multiple person's details using hashSet
 		list.add(new Person(firstName, lastName, address, city, zipCode, phoneNumber, email));
 
 		System.out.println(list);
@@ -182,5 +183,4 @@ public class AddressBook {
 			}
 		}
 	}
-
 }
